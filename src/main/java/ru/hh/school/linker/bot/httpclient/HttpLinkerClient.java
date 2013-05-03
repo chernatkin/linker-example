@@ -61,7 +61,7 @@ public class HttpLinkerClient {
 				final Channel ch = future.getChannel();
 		        ch.setAttachment(node);
 		        
-		        final HttpRequest request = new DefaultHttpRequest(HttpVersion.HTTP_1_1, HttpMethod.GET, url.toURI().toString());
+		        final HttpRequest request = new DefaultHttpRequest(HttpVersion.HTTP_1_1, HttpMethod.GET, url.toString());
 		        request.setHeader(HttpHeaders.Names.HOST, url.getHost());
 		        request.setHeader(HttpHeaders.Names.ACCEPT_CHARSET, CharsetUtil.UTF_8.name());
 		        
